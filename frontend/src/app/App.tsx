@@ -1,3 +1,11 @@
+import { RouterProvider } from 'react-router-dom'
+import { AppProviders } from './providers'
+import { router } from './router'
+
 export function App() {
-  return <h1 className="p-6 text-2xl font-bold">KinHospital</h1>
+  return (
+    <AppProviders>
+      <RouterProvider router={router} />
+    </AppProviders>
+  )
 }
